@@ -3,7 +3,8 @@
  *
  * usage: python AverageBlur.py <filename> <kernel-size>
 '''
-import cv2, sys
+import cv2
+import sys
 
 # get filename and kernel size from command line
 filename = sys.argv[1]

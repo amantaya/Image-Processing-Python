@@ -3,7 +3,8 @@
  *
  * usage: python ThresholdPractice <filename> <kernel-size> <threshold>
 '''
-import cv2, sys
+import cv2
+import sys
 
 # get filename, kernel size, and threshold value from command line
 filename = sys.argv[1]
