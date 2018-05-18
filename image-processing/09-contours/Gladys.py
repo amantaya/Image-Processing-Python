@@ -3,7 +3,8 @@
  *
  * usage: python Gladys.py <filename> <threshold>
 '''
-import cv2, sys
+import cv2
+import sys
 
 # read command-line arguments
 filename = sys.argv[1]

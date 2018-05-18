@@ -1,7 +1,8 @@
 '''
  * Python program to use contours to count the objects in an image.
 '''
-import cv2, sys
+import cv2
+import sys
 
 # read command-line arguments
 filename = sys.argv[1]

@@ -3,7 +3,8 @@
  *
  * usage: python CannyEdge.py <filename>
 '''
-import cv2, sys
+import cv2
+import sys
 
 '''
  * Function to perform Canny edge detection and display the
