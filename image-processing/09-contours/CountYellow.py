@@ -3,7 +3,10 @@
  *
  * usage: python CountYellow.py <filename> <kernel-size> <threshold>
 '''
-import cv2, sys, math, numpy as np
+import cv2
+import math
+import numpy as np
+import sys
 
 '''
  * Compute distance between two colors, as a 3D Euclidean distance.

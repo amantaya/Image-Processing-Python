@@ -3,7 +3,9 @@
  *
  * usage: python SobelEdge.py <filename> <kernel-size> <threshold>
 '''
-import cv2, sys, numpy as np
+import cv2
+import numpy as np
+import sys
 
 # read command-line arguments
 filename = sys.argv[1]
