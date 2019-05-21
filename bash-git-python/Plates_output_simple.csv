@@ -1,0 +1,9 @@
+IMAGE_NAME,PlateNo,Condition,Time,ColonyCount,AvgColonySize,PercentColonyArea
+colonies01.tif,1,control,24,12,6.1,14
+colonies02.tif,2,exp,24,84,3.2,22
+colonies03.tif,3,exp,24,792,3,78
+colonies04.tif,4,control,24,18,5.8,13
+colonies05.tif,1,control,48,14,6.5,16
+colonies06.tif,2,exp,48,85,5.2,46
+colonies07.tif,3,exp,48,25,11,90
+colonies08.tif,4,control,48,20,6.3,17
