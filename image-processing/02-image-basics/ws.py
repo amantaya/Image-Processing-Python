@@ -5,12 +5,12 @@
  * usage: python ws.py <dim>
 '''
 
-import cv2, sys, numpy as np
+import skimage.io, sys, numpy as np
 
 dim = int(sys.argv[1])
 
 img = np.zeros((dim, dim, 3), dtype="uint8")
 img.fill(255)
 
-cv2.imwrite("ws.bmp", img)
-cv2.imwrite("ws.jpg", img)
+skimage.io.imsave(fname = "ws.bmp", arr = img)
+skimage.io.imsave(fname = "ws.jpg", arr = img)
