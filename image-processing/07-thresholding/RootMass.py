@@ -30,7 +30,7 @@ binary_file_name = filename[:dot] + "-binary" + filename[dot:]
 skimage.io.imsave(fname=binary_file_name, arr=skimage.img_as_ubyte(binary))
 
 # determine root mass ratio
-rootPixels = np.sum(np.nonzero(binary))
+rootPixels = np.count_nonzero(binary)
 w = binary.shape[1]
 h = binary.shape[0]
 density = rootPixels / (w * h)
