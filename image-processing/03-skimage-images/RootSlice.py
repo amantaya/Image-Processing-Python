@@ -13,6 +13,4 @@ viewer.show()
 # extract, display, and save sub-image
 # WRITE YOUR CODE TO SELECT THE SUBIMAGE NAME clip HERE:
 
-
 # WRITE YOUR CODE TO SAVE clip HERE
-skimage.io.imsave(fname="clip.jpg", arr=clip)
