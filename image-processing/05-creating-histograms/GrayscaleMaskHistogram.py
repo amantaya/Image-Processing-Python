@@ -1,40 +1,35 @@
-'''
- * Generate a grayscale histogram for an image. 
- * Usage: python GrayscaleMaskHistogram.py <filename> 
-'''
-import cv2
+"""
+ * Generate a grayscale histogram for an image.
+ *
+ * Usage: python GrayscaleMaskHistogram.py <filename>
+"""
 import sys
 import numpy as np
+import skimage.draw
+import skimage.io
+import skimage.viewer
 from matplotlib import pyplot as plt
 
 # read image, based on command line filename argument;
 # read the image as grayscale from the outset
-image = cv2.imread(filename = sys.argv[1], flags = cv2.IMREAD_GRAYSCALE)
+img = skimage.io.imread(fname=sys.argv[1], as_gray=True)
 
 # display the image
-cv2.namedWindow(winname = "Grayscale Image", flags = cv2.WINDOW_NORMAL)
-cv2.imshow(winname = "Grayscale Image", mat = image)
-cv2.waitKey(delay = 0)
+viewer = skimage.viewer.ImageViewer(img)
+viewer.show()
 
-# create mask here, using np.zeros() and cv2.rectangle()
-# WRITE YOUR CODE HERE
+# create mask here, using np.zeros() and skimage.draw.rectangle()
 
-# create the histogram, using mask instead of None in the
-# cv2.calcHist() function call
-# MODIFY CODE HERE
-histogram = cv2.calcHist(
-    images = [img], 
-    channels = [0], 
-    mask = None, 
-    histSize = [256], 
-    ranges = [0, 256])
+# mask the image and create the new histogram
+histogram, bin_edges = np.histogram(img[mask], bins=256, range=(0.0, 1.0))
 
 # configure and draw the histogram figure
 plt.figure()
-plt.title(label = "Grayscale Histogram")
-plt.xlabel(xlabel = "grayscale value")
-plt.ylabel(ylabel = "pixels")
-plt.xlim([0, 256])
 
-plt.plot(histogram)
+plt.title("Grayscale Histogram")
+plt.xlabel("grayscale value")
+plt.ylabel("pixel count")
+plt.xlim([0.0, 1.0])
+plt.plot(bin_edges[0:-1], histogram)
+
 plt.show()
