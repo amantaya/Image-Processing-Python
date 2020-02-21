@@ -12,11 +12,11 @@ viewer = ImageViewer(image)
 viewer.show()
 
 # Create the basic mask
-mask = np.zeros(shape=image.shape[0:2], dtype="bool")
+mask = np.ones(shape=image.shape[0:2], dtype="bool")
 
 # Draw filled rectangle on the mask image
 rr, cc = skimage.draw.rectangle(start=(357, 44), end=(740, 720))
-mask[rr, cc] = True
+mask[rr, cc] = False
 
 # Display constructed mask
 viewer = ImageViewer(mask)
