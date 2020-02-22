@@ -12,5 +12,10 @@ viewer.show()
 
 # extract, display, and save sub-image
 # WRITE YOUR CODE TO SELECT THE SUBIMAGE NAME clip HERE:
+clip = image[0:1999, 1410:2765, :]
+viewer = skimage.viewer.ImageViewer(clip)
+viewer.show()
 
 # WRITE YOUR CODE TO SAVE clip HERE
+skimage.io.imsave(fname="clip.jpg", arr = clip)
+
